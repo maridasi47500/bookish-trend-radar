@@ -1,0 +1,2 @@
+class Jobhasnewspaper < ApplicationRecord
+end

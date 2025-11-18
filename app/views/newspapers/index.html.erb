@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Newspapers" %>
+
+<h1>Newspapers</h1>
+
+<div id="newspapers">
+  <% @newspapers.each do |newspaper| %>
+    <%= render newspaper %>
+    <p>
+      <%= link_to "Show this newspaper", newspaper %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New newspaper", new_newspaper_path %>
