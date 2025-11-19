@@ -1,6 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @job %>
+<%@job.newspapers.each do |h|%>
+<li>
+<%=h.name%>
+</li>
+<%end%>
 
 <div>
   <%= link_to "Edit this job", edit_job_path(@job) %> |

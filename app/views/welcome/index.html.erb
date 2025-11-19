@@ -1,0 +1,22 @@
+<h1>Welcome</h1>
+<%if user_signed_in?%>
+<%current_user.jobs.each do |j|%>
+<h4>
+<%=j.name%>
+</h4>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+<%j.newspapers.each do |n|%>
+  <div class="col">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%=link_to n.name, n%></h5>
+        <p class="card-text"><%=link_to n.link, n.link%></p>
+      </div>
+    </div>
+  </div>
+<%end%>
+</div>
+<%end%>
+<%end%>
