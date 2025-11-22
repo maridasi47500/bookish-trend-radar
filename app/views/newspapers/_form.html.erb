@@ -17,13 +17,25 @@
   </div>
 
   <div>
-    <%= form.label :link, style: "display: block" %>
+    <%= form.label :link, "lien d'1 article", style: "display: block" %>
     <%= form.text_field :link %>
   </div>
 
   <div>
     <%= form.label :myinfo, style: "display: block" %>
     <%= form.text_field :myinfo %>
+  </div>
+  <div>
+    <%= form.label :title, "class name/id name for title", style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+  <div>
+    <%= form.label :content, "classname for content", style: "display: block" %>
+    <%= form.text_field :content %>
+  </div>
+  <div>
+    <%= form.label :author, "classname /id for name of author", style: "display: block" %>
+    <%= form.text_field :author %>
   </div>
 
   <div>

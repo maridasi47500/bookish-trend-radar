@@ -1,8 +1,25 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @newspaper %>
+<h3>ajouter un autre article </h3>
+<%= render "articles/form", article: Article.new(newspaper_id: @newspaper.id) %>
+<div style="float: left;clear: both;" class="row row-cols-1 row-cols-md-2 g-4">
+<%@newspaper.articles.each do |n|%>
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%=link_to n.title, n%></h5>
+        <p class="card-text"><%= n.content.truncate(100)%></p>
+        <p class="card-text"><%=n.author%></p>
+      </div>
+    </div>
+  </div>
+<%end%>
+</div>
 
-<div>
+
+<div style="float:left;clear:both;">
+
   <%= link_to "Edit this newspaper", edit_newspaper_path(@newspaper) %> |
   <%= link_to "Back to newspapers", newspapers_path %>
 

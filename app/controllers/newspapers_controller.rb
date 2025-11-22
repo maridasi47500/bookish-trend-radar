@@ -65,6 +65,6 @@ class NewspapersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def newspaper_params
-      params.expect(newspaper: [ :name, :link, :myinfo ])
+      params.expect(newspaper: [ :name, :link, :myinfo, :title, :content, :author ])
     end
 end

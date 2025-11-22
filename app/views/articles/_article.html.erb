@@ -1,0 +1,14 @@
+<div id="<%= dom_id article %>">
+  <p>
+    <%= link_to "back to newspaper", article.newspaper %>
+  </p>
+
+  <p>
+    <strong>Link:</strong>
+    <%= link_to article.link, article.link %>
+  </p>
+ <h2><%=article.title%></h2>
+ <p>by <%=article.author%></p>
+ <p><%=article.content%></p>
+
+</div>
